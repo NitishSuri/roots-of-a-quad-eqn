@@ -1,0 +1,39 @@
+# roots-of-a-quad-eqn
+//10th program on c
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+float a,b,c,descriminant=0;
+float root1,root2;
+printf("Enter the coefficient of x^2 \n");
+scanf("%f",&a);
+
+printf("Enter the value of x \n");
+scanf("%f",&b);
+
+printf("Enter the value of coefficient \n");
+scanf("%f",&c);
+
+descriminant=b*b-4*a*c;
+
+if(descriminant>0)
+{
+printf("Roots exsists \n");
+root1=(-b+ sqrt(descriminant)) / (2*a);
+root2=(-b- sqrt(descriminant)) / (2*a);
+
+printf("root1= %f , root2= %f \n");
+}
+else if(descriminant==0)
+{
+printf("The roots are equal \n");
+root1=root2=-b/2*a;
+printf("root1= %f , root 2= %f \n");
+}
+else
+{
+printf(" Real roots does not exsists \n");
+}
+return(0);
+}
